@@ -30,6 +30,7 @@ use Zend\Authentication\Storage\NonPersistent as NonPersistentStorage;
  * @license MIT
  * @link    http://www.doctrine-project.org/
  * @author  Marco Pivetta <ocramius@gmail.com>
+ * @covers  DoctrineModule\Authentication\Storage\ObjectRepository
  */
 class ObjectRepositoryTest extends BaseTestCase
 {
@@ -51,7 +52,7 @@ class ObjectRepositoryTest extends BaseTestCase
                  ->method('getIdentifierValues')
                  ->with($this->equalTo($entity))
                  ->will($this->returnValue($entity->getUsername()));
-        
+
         $storage = new ObjectRepositoryStorage(
             array(
                 'objectRepository' => $objectRepository,
@@ -65,7 +66,7 @@ class ObjectRepositoryTest extends BaseTestCase
 
         $result = $storage->read();
         $this->assertEquals($entity, $result);
-        
+
         $key = $storage->readKeyOnly();
         $this->assertEquals('a username', $key);
     }

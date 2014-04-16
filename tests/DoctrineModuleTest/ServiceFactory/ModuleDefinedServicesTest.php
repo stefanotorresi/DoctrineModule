@@ -28,6 +28,7 @@ use PHPUnit_Framework_TestCase;
  * @license MIT
  * @link    http://www.doctrine-project.org/
  * @author  Marco Pivetta <ocramius@gmail.com>
+ * @covers  \DoctrineModule\ServiceFactory\AbstractDoctrineServiceFactory
  */
 class ModuleDefinedServicesTest extends PHPUnit_Framework_TestCase
 {

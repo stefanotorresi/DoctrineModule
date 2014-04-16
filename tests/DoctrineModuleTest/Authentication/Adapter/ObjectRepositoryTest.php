@@ -30,6 +30,8 @@ use DoctrineModuleTest\Authentication\Adapter\TestAsset\PublicPropertiesIdentity
  * @license MIT
  * @link    http://www.doctrine-project.org/
  * @author  Marco Pivetta <ocramius@gmail.com>
+ * @covers  DoctrineModule\Authentication\Adapter\ObjectRepository
+ * @covers  DoctrineModule\Options\Authentication
  */
 class ObjectRepositoryTest extends BaseTestCase
 {
